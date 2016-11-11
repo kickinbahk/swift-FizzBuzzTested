@@ -19,6 +19,10 @@ class Brain: NSObject {
       return fizz
     }
     
+    if isDivisibleByFive(number) {
+      return buzz
+    }
+    
     return String(number)
     
   }
