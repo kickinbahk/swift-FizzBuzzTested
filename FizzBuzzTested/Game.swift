@@ -12,18 +12,21 @@ class Game: NSObject {
 
   let fizzbuzz = FizzBuzz()
   var score: Int
+  var counter: Int
   
   override init() {
     score = 0
+    counter = 0
     super.init()
   }
   
   func play(_ move: String) -> Bool {
-    score += 1
+    counter += 1
     
-    let result = fizzbuzz.check(score)
+    let result = fizzbuzz.check(counter)
     
     if result == move {
+      score += 1
       return true
     } else {
       return false

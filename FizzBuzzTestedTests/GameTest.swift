@@ -27,55 +27,62 @@ class GameTest: XCTestCase {
     XCTAssertTrue(game.score == 0)
   }
   
-  func testOnPlayScoreIncremented() {
+  func testOnPlayCounterIncremented() {
     game.play("Fizz")
-    XCTAssertTrue(game.score == 1)
+    XCTAssertTrue(game.counter == 1)
   }
   
+  func testIfMoveWrongScoreNotIncremented() {
+    game.score = 1
+    game.play("Fizz")
+    XCTAssertEqual(game.score, 1)
+  }
+  
+  // MARK: - Checks For Correct/Incorrect Answers
   func testIfFizzMoveIsRight() {
-    game.score = 2
+    game.counter = 2
     let result = game.play("Fizz")
     XCTAssertEqual(result, true)
   }
   
   func testIfBuzzMoveIsRight() {
-    game.score = 4
+    game.counter = 4
     let result = game.play("Buzz")
     XCTAssertEqual(result, true)
   }
   
   func testIfFizzBuzzMoveIsRight() {
-    game.score = 14
+    game.counter = 14
     let result = game.play("FizzBuzz")
     XCTAssertEqual(result, true)
   }
   
   func testIfNumberMoveIsRight() {
-    game.score = 3
+    game.counter = 3
     let result = game.play(String(4))
     XCTAssertEqual(result, true)
   }
   
   func testIfFizzMoveIsWrong() {
-    game.score = 3
+    game.counter = 3
     let result = game.play("Fizz")
     XCTAssertEqual(result, false)
   }
   
   func testIfBuzzMoveIsWrong() {
-    game.score = 5
+    game.counter = 5
     let result = game.play("Buzz")
     XCTAssertEqual(result, false)
   }
   
   func testIfFizzBuzzMoveIsWrong() {
-    game.score = 15
+    game.counter = 15
     let result = game.play("FizzBuzz")
     XCTAssertEqual(result, false)
   }
   
   func testIfNumberMoveIsWrong() {
-    game.score = 2
+    game.counter = 2
     let result = game.play(String(1))
     XCTAssertEqual(result, false)
   }
