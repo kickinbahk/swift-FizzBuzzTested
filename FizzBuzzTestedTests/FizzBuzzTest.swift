@@ -1,5 +1,5 @@
 //
-//  BrainTest.swift
+//  FizzBuzzTest.swift
 //  FizzBuzzTested
 //
 //  Created by Josiah Mory on 11/11/16.
@@ -9,9 +9,9 @@
 import XCTest
 @testable import FizzBuzzTested
 
-class BrainTest: XCTestCase {
+class FizzBuzzTest: XCTestCase {
   
-  let brain = Brain()
+  let fizzbuzz = FizzBuzz()
   
   override func setUp() {
     super.setUp()
@@ -24,52 +24,52 @@ class BrainTest: XCTestCase {
   }
   
   func testIsDivisibleByThree() {
-    let result = brain.isDivisibleByThree(3)
+    let result = fizzbuzz.isDivisibleByThree(3)
     XCTAssertEqual(result, true)
   }
   
   func testIsOneDivisibleByThree() {
-    let result = brain.isDivisibleByThree(1)
+    let result = fizzbuzz.isDivisibleByThree(1)
     XCTAssertEqual(result, false)
   }
   
   func testIsDivisibleByFive() {
-    let result = brain.isDivisibleByFive(5)
+    let result = fizzbuzz.isDivisibleByFive(5)
     XCTAssertEqual(result, true)
   }
   
   func testIsSevenDivisibleByFive() {
-    let result = brain.isDivisibleByFive(7)
+    let result = fizzbuzz.isDivisibleByFive(7)
     XCTAssertEqual(result, false)
   }
   
   func testIsDivisibleByFifteen() {
-    let result = brain.isDivisibleByFifteen(15)
+    let result = fizzbuzz.isDivisibleByFifteen(15)
     XCTAssertEqual(result, true)
   }
   
   func testIsSeventeenDivisibleByFifteen() {
-    let result = brain.isDivisibleByFifteen(17)
+    let result = fizzbuzz.isDivisibleByFifteen(17)
     XCTAssertEqual(result, false)
   }
   
   func testSayNumber() {
-    let result = brain.check(11)
+    let result = fizzbuzz.check(11)
     XCTAssertEqual(result, "11")
   }
 
   func testSayFizz() {
-    let result = brain.check(3)
+    let result = fizzbuzz.check(3)
     XCTAssertEqual(result, "Fizz")
   }
   
   func testSayBuzz() {
-    let result = brain.check(5)
+    let result = fizzbuzz.check(5)
     XCTAssertEqual(result, "Buzz")
   }
   
   func testSayFizzBuzz() {
-    let result = brain.check(15)
+    let result = fizzbuzz.check(15)
     XCTAssertEqual(result, "FizzBuzz")
   }
 

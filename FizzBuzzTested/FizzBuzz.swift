@@ -1,5 +1,5 @@
 //
-//  Brain.swift
+//  FizzBuzz.swift
 //  FizzBuzzTested
 //
 //  Created by Josiah Mory on 11/11/16.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Brain: NSObject {
+class FizzBuzz: NSObject {
   
   func check(_ number: Int) -> String {
     let fizz = "Fizz"
