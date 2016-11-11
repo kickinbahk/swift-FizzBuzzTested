@@ -9,26 +9,23 @@
 import Foundation
 
 class Brain: NSObject {
+  
   func isDivisibleByThree(_ number: Int) -> Bool {
-    if number % 3 == 0 {
-      return true
-    } else {
-      return false
-    }
+    return isDivisible(valueToBeDivided: number, byDivisor: 3)
   }
   
   func isDivisibleByFive(_ number: Int) -> Bool {
-    if number % 5 == 0 {
-       return true
-    } else {
-      return false
-    }
+    return isDivisible(valueToBeDivided: number, byDivisor: 5)
   }
   
   func isDivisibleByFifteen(_ number: Int) -> Bool {
-    if number % 15 == 0 {
+    return isDivisible(valueToBeDivided: number, byDivisor: 15)
+  }
+  
+  func isDivisible(valueToBeDivided number: Int, byDivisor divisor: Int) -> Bool {
+    if number % divisor == 0 {
       return true
-    } else  {
+    } else {
       return false
     }
   }
