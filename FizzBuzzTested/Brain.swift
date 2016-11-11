@@ -9,5 +9,11 @@
 import Foundation
 
 class Brain: NSObject {
-  
+  func isDivisibleByThree(_ number: Int) -> Bool {
+    if number % 3 == 0 {
+      return true
+    } else {
+      return false
+    }
+  }
 }
