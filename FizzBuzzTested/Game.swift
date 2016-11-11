@@ -9,6 +9,8 @@
 import Foundation
 
 class Game: NSObject {
+
+  let fizzbuzz = FizzBuzz()
   var score: Int
   
   override init() {
@@ -18,7 +20,14 @@ class Game: NSObject {
   
   func play(_ move: String) -> Bool {
     score += 1
-    return true
+    
+    let result = fizzbuzz.check(score)
+    
+    if result == move {
+      return true
+    } else {
+      return false
+    }
   }
   
   
