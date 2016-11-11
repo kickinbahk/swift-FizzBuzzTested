@@ -52,11 +52,23 @@ class BrainTest: XCTestCase {
     let result = brain.isDivisibleByFifteen(17)
     XCTAssertEqual(result, false)
   }
+  
+  func testSayNumber() {
+    let result = brain.check(11)
+    XCTAssertEqual(result, "11")
+  }
 
   func testSayFizz() {
     let result = brain.check(3)
     XCTAssertEqual(result, "Fizz")
   }
+  
+  func testSayBuzz() {
+    let result = brain.check(5)
+    XCTAssertEqual(result, "Buzz")
+  }
+  
+  
 
 }
 
