@@ -66,7 +66,12 @@ class BrainTest: XCTestCase {
   func testSayBuzz() {
     let result = brain.check(5)
     XCTAssertEqual(result, "Buzz")
-  }  
+  }
+  
+  func testSayFizzBuzz() {
+    let result = brain.check(15)
+    XCTAssertEqual(result, "FizzBuzz")
+  }
 
 }
 
