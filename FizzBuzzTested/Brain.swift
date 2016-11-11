@@ -10,6 +10,19 @@ import Foundation
 
 class Brain: NSObject {
   
+  func check(_ number: Int) -> String {
+    let fizz = "Fizz"
+    let buzz = "Buzz"
+    let fizzbuzz = fizz + buzz
+    
+    if isDivisibleByThree(number) {
+      return fizz
+    }
+    
+    return String(number)
+    
+  }
+  
   func isDivisibleByThree(_ number: Int) -> Bool {
     return isDivisible(valueToBeDivided: number, byDivisor: 3)
   }
