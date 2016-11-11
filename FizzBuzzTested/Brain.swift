@@ -17,8 +17,11 @@ class Brain: NSObject {
     }
   }
   
-  func isDivisibleByFive(_ nubmer: Int) -> Bool {
-    return true
-    
+  func isDivisibleByFive(_ number: Int) -> Bool {
+    if number % 5 == 0 {
+       return true
+    } else {
+      return false
+    }
   }
 }
