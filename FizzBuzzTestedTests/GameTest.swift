@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import FizzBuzzTested
 
 class GameTest: XCTestCase {
   
@@ -22,6 +23,17 @@ class GameTest: XCTestCase {
     super.tearDown()
   }
   
-  
+  func testGameStartsAtZero() {
+    XCTAssertTrue(game.score == 0)
+  }
     
 }
+
+
+
+
+
+
+
+
+
