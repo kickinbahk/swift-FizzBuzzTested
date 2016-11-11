@@ -15,6 +15,10 @@ class Brain: NSObject {
     let buzz = "Buzz"
     let fizzbuzz = fizz + buzz
     
+    if isDivisibleByFifteen(number) {
+      return fizzbuzz
+    }
+    
     if isDivisibleByThree(number) {
       return fizz
     }
