@@ -39,7 +39,7 @@
 /* Begin PBXFileReference section */
 		EB3F863C1DD6518700250FDA /* GameTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTest.swift; sourceTree = "<group>"; };
 		EB3F863E1DD6527900250FDA /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		EB3F86401DD68F3E00250FDA /* ViewControllerUnitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerUnitTests.swift; path = ../FizzBuzzTestedTests/ViewControllerUnitTests.swift; sourceTree = "<group>"; };
+		EB3F86401DD68F3E00250FDA /* ViewControllerUnitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerUnitTests.swift; sourceTree = "<group>"; };
 		EBA1C6191DD61A8B003CE27A /* FizzBuzzTested.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FizzBuzzTested.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBA1C61C1DD61A8B003CE27A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBA1C61E1DD61A8B003CE27A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +121,7 @@
 				EBA1C6331DD61A8B003CE27A /* Info.plist */,
 				EBA1C64A1DD61BDE003CE27A /* FizzBuzzTest.swift */,
 				EB3F863C1DD6518700250FDA /* GameTest.swift */,
+				EB3F86401DD68F3E00250FDA /* ViewControllerUnitTests.swift */,
 			);
 			path = FizzBuzzTestedTests;
 			sourceTree = "<group>";
@@ -128,7 +129,6 @@
 		EBA1C63B1DD61A8B003CE27A /* FizzBuzzTestedUITests */ = {
 			isa = PBXGroup;
 			children = (
-				EB3F86401DD68F3E00250FDA /* ViewControllerUnitTests.swift */,
 				EBA1C63E1DD61A8B003CE27A /* Info.plist */,
 			);
 			path = FizzBuzzTestedUITests;
