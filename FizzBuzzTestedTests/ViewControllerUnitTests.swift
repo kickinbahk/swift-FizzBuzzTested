@@ -27,11 +27,22 @@ class ViewControllerUnitTests: XCTestCase {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
     super.tearDown()
   }
-
+  
+  func testHasAGame() {
+    XCTAssertNotNil(viewController.game)
+  }
+  
   func testMove1IncrementalScore() {
     viewController.play("1")
     let newScore = viewController.gameScore
     XCTAssertEqual(newScore, 1)
+  }
+  
+  func testMove2IncrementScore() {
+    viewController.play("1")
+    viewController.play("2")
+    let newScore = viewController.gameScore
+    XCTAssertEqual(newScore, 2)
   }
 }
 
