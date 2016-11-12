@@ -32,13 +32,14 @@ class ViewControllerUnitTests: XCTestCase {
     XCTAssertNotNil(viewController.game)
   }
   
+  // MARK: - Score is Incremented for Correct Answer
   func testMove1IncrementalScore() {
     viewController.play("1")
     let newScore = viewController.gameScore
     XCTAssertEqual(newScore, 1)
   }
   
-  func testMove2IncrementScore() {
+  func testNumberMove2IncrementScore() {
     viewController.play("1")
     viewController.play("2")
     let newScore = viewController.gameScore
@@ -65,6 +66,30 @@ class ViewControllerUnitTests: XCTestCase {
     let newScore = viewController.gameScore
     XCTAssertEqual(newScore, 1)
   }
+  
+  // MARK: - Score is Not Incremented for Incorrect Answer
+  func testFizzIncorrectNotIncrementScore() {
+    viewController.game?.counter = 1
+    viewController.play("Fizz")
+    let newScore = viewController.gameScore
+    XCTAssertEqual(newScore, 0)
+  }
+  
+  func testBuzzIncorrectNotIncrementScore() {
+    viewController.game?.counter = 3
+    viewController.play("Fizz")
+    let newScore = viewController.gameScore
+    XCTAssertEqual(newScore, 0)
+  }
+  
+  func testFizzBuzzIncorrectNotIncrementScore() {
+    viewController.game?.counter = 11
+    viewController.play("FizzBuzz")
+    let newScore = viewController.gameScore
+    XCTAssertEqual(newScore, 0)
+  }
+  
+  
 }
 
 
