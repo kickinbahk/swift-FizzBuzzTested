@@ -38,6 +38,17 @@ class GameTest: XCTestCase {
     XCTAssertEqual(game.score, 1)
   }
   
+  func testPlayShouldReturnIfMoveRight() {
+    let response = game.play("1")
+    XCTAssertNotNil(response.right)
+  }
+  
+  func testPlayShouldReturnNewScore() {
+    let response = game.play("1")
+    XCTAssertNotNil(response.score)
+  }
+  
+  
   // MARK: - Checks For Correct/Incorrect Answers
   func testIfFizzMoveIsRight() {
     game.counter = 2
