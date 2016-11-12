@@ -52,49 +52,57 @@ class GameTest: XCTestCase {
   // MARK: - Checks For Correct/Incorrect Answers
   func testIfFizzMoveIsRight() {
     game.counter = 2
-    let result = game.play("Fizz")
+    let response = game.play("Fizz")
+    let result = response.right
     XCTAssertEqual(result, true)
   }
   
   func testIfBuzzMoveIsRight() {
     game.counter = 4
-    let result = game.play("Buzz")
+    let response = game.play("Buzz")
+    let result = response.right
     XCTAssertEqual(result, true)
   }
   
   func testIfFizzBuzzMoveIsRight() {
     game.counter = 14
-    let result = game.play("FizzBuzz")
+    let response = game.play("FizzBuzz")
+    let result = response.right
     XCTAssertEqual(result, true)
   }
   
   func testIfNumberMoveIsRight() {
     game.counter = 3
-    let result = game.play(String(4))
+    let response = game.play(String(4))
+    let result = response.right
     XCTAssertEqual(result, true)
   }
   
   func testIfFizzMoveIsWrong() {
     game.counter = 3
-    let result = game.play("Fizz")
+    let response = game.play("Fizz")
+    let result = response.right
     XCTAssertEqual(result, false)
   }
   
   func testIfBuzzMoveIsWrong() {
     game.counter = 5
-    let result = game.play("Buzz")
+    let response = game.play("Buzz")
+    let result = response.right
     XCTAssertEqual(result, false)
   }
   
   func testIfFizzBuzzMoveIsWrong() {
     game.counter = 15
-    let result = game.play("FizzBuzz")
+    let response = game.play("FizzBuzz")
+    let result = response.right
     XCTAssertEqual(result, false)
   }
   
   func testIfNumberMoveIsWrong() {
     game.counter = 2
-    let result = game.play(String(1))
+    let response = game.play(String(1))
+    let result = response.right
     XCTAssertEqual(result, false)
   }
   

@@ -19,16 +19,16 @@ class ViewController: UIViewController {
     // Do any additional setup after loading the view, typically from a nib.
   }
 
+  func play(_ move: String) {
+    guard let newGame = game else { return }
+
+    let response = newGame.play(move)
+    gameScore = response.score
+  }
+
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
-  
-  func play(_ move: String) {
-    guard let newGame = game else { return }
-    let newScore = newGame.play(move)
-  }
-
-
 }
 

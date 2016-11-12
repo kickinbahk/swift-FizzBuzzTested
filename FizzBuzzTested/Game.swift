@@ -20,16 +20,16 @@ class Game: NSObject {
     super.init()
   }
   
-  func play(_ move: String) -> Bool {
+  func play(_ move: String) -> (right: Bool, score: Int) {
     counter += 1
     
     let result = fizzbuzz.check(counter)
     
     if result == move {
       score += 1
-      return true
+      return (true, score)
     } else {
-      return false
+      return (false, score)
     }
   }
   
