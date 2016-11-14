@@ -56,9 +56,13 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Duc-H1-JcX">
                                         <rect key="frame" x="0.0" y="249" width="153" height="187"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="buzzButton"/>
                                         <state key="normal" image="lightning" backgroundImage="button_border">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HPk-iA-fzG"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i09-1a-rnO">
                                         <rect key="frame" x="229" y="0.0" width="153" height="187"/>
@@ -85,6 +89,7 @@
                         <color key="backgroundColor" red="0.95294117647058818" green="0.45882352941176469" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="buzzButton" destination="Duc-H1-JcX" id="1uQ-je-WRv"/>
                         <outlet property="fizzButton" destination="i09-1a-rnO" id="b24-zf-Wgi"/>
                         <outlet property="numberButton" destination="wr2-PE-lYw" id="YDe-tn-TGV"/>
                     </connections>

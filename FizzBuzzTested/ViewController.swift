@@ -12,6 +12,7 @@ class ViewController: UIViewController {
   
   @IBOutlet weak var numberButton: UIButton!
   @IBOutlet weak var fizzButton: UIButton!
+  @IBOutlet weak var buzzButton: UIButton!
   
   var game: Game?
   var gameScore: Int?
@@ -41,6 +42,9 @@ class ViewController: UIViewController {
     }
     if sender == fizzButton {
       play(Move.Fizz)
+    }
+    if sender == buzzButton {
+      play(Move.Buzz)
     }
   }
   
