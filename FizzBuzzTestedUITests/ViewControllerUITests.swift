@@ -55,8 +55,8 @@ class ViewControllerUITests: XCTestCase {
     numberButton.tap()
     numberButton.tap()
     fizzButton.tap()
-    let newScore = fizzButton.label
-    XCTAssertEqual(newScore, "1")
+    let newScore = numberButton.label
+    XCTAssertEqual(newScore, "3")
   }
 }
 

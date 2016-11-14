@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
   
   @IBOutlet weak var numberButton: UIButton!
+  @IBOutlet weak var fizzButton: UIButton!
   
   var game: Game?
   var gameScore: Int?
@@ -34,8 +35,13 @@ class ViewController: UIViewController {
     counter = game!.counter
   }
   
-  @IBAction func buttonTapped(_ sender: Any) {
-    play(Move.Number)
+  @IBAction func buttonTapped(_ sender: UIButton) {
+    if sender == numberButton {
+      play(Move.Number)
+    }
+    if sender == fizzButton {
+      play(Move.Fizz)
+    }
   }
   
 
