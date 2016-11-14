@@ -14,7 +14,7 @@ class ViewController: UIViewController {
   
   var game: Game?
   var gameScore: Int?
-  var counter: Int? {
+  var counter: Int = 0 {
     didSet {
       numberButton.setTitle(String(game!.counter), for: .normal)
     }
@@ -24,7 +24,6 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     game = Game()
-    // Do any additional setup after loading the view, typically from a nib.
   }
 
   func play(_ move: String) {
@@ -36,7 +35,7 @@ class ViewController: UIViewController {
   }
   
   @IBAction func buttonTapped(_ sender: Any) {
-    play("1")
+    play(String(counter))
   }
   
 
