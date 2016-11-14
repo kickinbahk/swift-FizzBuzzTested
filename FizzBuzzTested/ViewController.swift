@@ -9,8 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
+  
+  @IBOutlet weak var numberButton: UIButton!
+  
   var game: Game?
   var gameScore: Int?
+  var counter: Int? {
+    didSet {
+      numberButton.setTitle(String(game!.counter), for: .normal)
+    }
+  }
 
 
   override func viewDidLoad() {
@@ -24,7 +32,13 @@ class ViewController: UIViewController {
 
     let response = newGame.play(move)
     gameScore = response.score
+    counter = game!.counter
   }
+  
+  @IBAction func buttonTapped(_ sender: Any) {
+    play("1")
+  }
+  
 
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()

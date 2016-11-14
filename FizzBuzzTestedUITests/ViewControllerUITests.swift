@@ -30,7 +30,7 @@ class ViewControllerUITests: XCTestCase {
 
   func testTapNumberButtonIncrementsScore() {
     XCUIApplication().buttons["0"].tap()
-    let newScore = XCUIApplication().buttons["0"].label
+    let newScore = XCUIApplication().buttons["1"].label
     XCTAssertEqual(newScore, "1")
   }
     
