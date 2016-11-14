@@ -34,35 +34,35 @@ class ViewControllerUnitTests: XCTestCase {
   
   // MARK: - Score is Incremented for Correct Answer
   func testMove1IncrementalScore() {
-    viewController.play("1")
+    viewController.play(Move.Number)
     let newScore = viewController.gameScore
     XCTAssertEqual(newScore, 1)
   }
   
   func testNumberMove2IncrementScore() {
-    viewController.play("1")
-    viewController.play("2")
+    viewController.play(Move.Number)
+    viewController.play(Move.Number)
     let newScore = viewController.gameScore
     XCTAssertEqual(newScore, 2)
   }
   
   func testFizzIncrementScore() {
     viewController.game?.counter = 2
-    viewController.play("Fizz")
+    viewController.play(Move.Fizz)
     let newScore = viewController.gameScore
     XCTAssertEqual(newScore, 1)
   }
   
   func testBuzzIncrementScore() {
     viewController.game?.counter = 4
-    viewController.play("Buzz")
+    viewController.play(Move.Buzz)
     let newScore = viewController.gameScore
     XCTAssertEqual(newScore, 1)
   }
   
   func testFizzBuzzIncrementScore() {
     viewController.game?.counter = 14
-    viewController.play("FizzBuzz")
+    viewController.play(Move.FizzBuzz)
     let newScore = viewController.gameScore
     XCTAssertEqual(newScore, 1)
   }
@@ -70,21 +70,21 @@ class ViewControllerUnitTests: XCTestCase {
   // MARK: - Score is Not Incremented for Incorrect Answer
   func testFizzIncorrectNotIncrementScore() {
     viewController.game?.counter = 1
-    viewController.play("Fizz")
+    viewController.play(Move.Fizz)
     let newScore = viewController.gameScore
     XCTAssertEqual(newScore, 0)
   }
   
   func testBuzzIncorrectNotIncrementScore() {
     viewController.game?.counter = 3
-    viewController.play("Fizz")
+    viewController.play(Move.Fizz)
     let newScore = viewController.gameScore
     XCTAssertEqual(newScore, 0)
   }
   
   func testFizzBuzzIncorrectNotIncrementScore() {
     viewController.game?.counter = 11
-    viewController.play("FizzBuzz")
+    viewController.play(Move.FizzBuzz)
     let newScore = viewController.gameScore
     XCTAssertEqual(newScore, 0)
   }

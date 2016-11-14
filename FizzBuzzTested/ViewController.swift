@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     game = Game()
   }
 
-  func play(_ move: String) {
+  func play(_ move: Move) {
     guard let newGame = game else { return }
 
     let response = newGame.play(move)
@@ -35,7 +35,7 @@ class ViewController: UIViewController {
   }
   
   @IBAction func buttonTapped(_ sender: Any) {
-    play(String(counter))
+    play(Move.Number)
   }
   
 

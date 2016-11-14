@@ -10,24 +10,21 @@ import Foundation
 
 class FizzBuzz: NSObject {
   
-  func check(_ number: Int) -> String {
-    let fizz = "Fizz"
-    let buzz = "Buzz"
-    let fizzbuzz = fizz + buzz
+  func check(_ number: Int) -> Move {
     
     if isDivisibleByFifteen(number) {
-      return fizzbuzz
+      return Move.FizzBuzz
     }
     
     if isDivisibleByThree(number) {
-      return fizz
+      return Move.Fizz
     }
     
     if isDivisibleByFive(number) {
-      return buzz
+      return Move.Buzz
     }
     
-    return String(number)
+    return Move.Number
     
   }
   
