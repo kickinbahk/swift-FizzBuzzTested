@@ -85,14 +85,14 @@ class ViewControllerUITests: XCTestCase {
     XCTAssertEqual(newScore, "15")
   }
   
-  func testScoreIsKept() {
+  func testScoreIsNotIncrementedOnIncorrectAnswer() {
     let app = XCUIApplication()
+    let fizzBuzzButton = app.buttons["fizzBuzzButton"]
     let scoreLabel = app.staticTexts.element(matching: .any, identifier: "scoreLabel").label
-    let startingScore = "0"
     
-    XCTAssertEqual(scoreLabel, startingScore)
+    fizzBuzzButton.tap()
+    XCTAssertEqual(scoreLabel, "0")
   }
-  
   
   func playTo14() {
     let app = XCUIApplication()
