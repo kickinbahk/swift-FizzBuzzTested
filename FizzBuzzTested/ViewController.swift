@@ -19,16 +19,14 @@ class ViewController: UIViewController {
   
   var game: Game?
   var gameScore: Int?
-  var counter: Int = 0 {
-    didSet {
-      numberButton.setTitle(String(game!.counter), for: .normal)
-    }
-  }
+  var counter: Int = 0
+  var buttonCounter = 1
 
 
   override func viewDidLoad() {
     super.viewDidLoad()
     scoreLabel.text = "0"
+    numberButton.setTitle("\(buttonCounter)", for: .normal)
     game = Game()
   }
 
@@ -38,6 +36,8 @@ class ViewController: UIViewController {
     let response = newGame.play(move)
     gameScore = response.score
     counter = game!.counter
+    buttonCounter = counter + 1
+    numberButton.setTitle("\(buttonCounter)", for: .normal)
     scoreLabel.text = String(gameScore!)
   }
   
