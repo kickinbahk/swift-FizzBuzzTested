@@ -14,6 +14,8 @@ class ViewController: UIViewController {
   @IBOutlet weak var fizzButton: UIButton!
   @IBOutlet weak var buzzButton: UIButton!
   @IBOutlet weak var fizzBuzzButton: UIButton!
+  @IBOutlet weak var scoreLabel: UILabel!
+
   
   var game: Game?
   var gameScore: Int?
@@ -26,6 +28,7 @@ class ViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    scoreLabel.text = "0"
     game = Game()
   }
 
@@ -35,6 +38,7 @@ class ViewController: UIViewController {
     let response = newGame.play(move)
     gameScore = response.score
     counter = game!.counter
+    scoreLabel.text = String(gameScore!)
   }
   
   @IBAction func buttonTapped(_ sender: UIButton) {
