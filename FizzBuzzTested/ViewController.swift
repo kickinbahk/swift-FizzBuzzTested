@@ -56,6 +56,12 @@ class ViewController: UIViewController {
     }
   }
   
+  @IBAction func playAgain() {
+    scoreLabel.text = "0"
+    buttonCounter = 1
+    numberButton.setTitle("\(buttonCounter)", for: .normal)
+    game = Game()
+  }
 
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()

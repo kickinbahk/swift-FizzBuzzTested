@@ -29,6 +29,9 @@
                                 <state key="normal" title="Play Again">
                                     <color key="titleColor" red="0.078431372549019607" green="0.21176470588235294" blue="0.25882352941176467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="playAgain" destination="BYZ-38-t0r" eventType="touchUpInside" id="1p3-O1-ooq"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kkw-IL-GnF">
                                 <rect key="frame" x="16" y="141" width="288" height="268"/>
