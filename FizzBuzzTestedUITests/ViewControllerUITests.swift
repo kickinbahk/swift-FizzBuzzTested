@@ -33,7 +33,7 @@ class ViewControllerUITests: XCTestCase {
     let numberButton = app.buttons["numberButton"]
     
     numberButton.tap()
-    let newScore = numberButton.label
+    let newScore = app.staticTexts.element(matching: .any, identifier: "scoreLabel").label
     XCTAssertEqual(newScore, "1")
   }
   
@@ -43,7 +43,7 @@ class ViewControllerUITests: XCTestCase {
     
     numberButton.tap()
     numberButton.tap()
-    let newScore = numberButton.label
+    let newScore = app.staticTexts.element(matching: .any, identifier: "scoreLabel").label
     XCTAssertEqual(newScore, "2")
   }
 
@@ -55,7 +55,7 @@ class ViewControllerUITests: XCTestCase {
     numberButton.tap()
     numberButton.tap()
     fizzButton.tap()
-    let newScore = numberButton.label
+    let newScore = app.staticTexts.element(matching: .any, identifier: "scoreLabel").label
     XCTAssertEqual(newScore, "3")
   }
   
@@ -70,27 +70,26 @@ class ViewControllerUITests: XCTestCase {
     fizzButton.tap()
     numberButton.tap()
     buzzButton.tap()
-    let newScore = numberButton.label
+    let newScore = app.staticTexts.element(matching: .any, identifier: "scoreLabel").label
     XCTAssertEqual(newScore, "5")
   }
   
   func testTapFizzBuzzButtonIncrementScore() {
     let app = XCUIApplication()
-    let numberButton = app.buttons["numberButton"]
     let fizzBuzzButton = app.buttons["fizzBuzzButton"]
     
     playTo14()
     
     fizzBuzzButton.tap()
-    let newScore = numberButton.label
+    let newScore = app.staticTexts.element(matching: .any, identifier: "scoreLabel").label
     XCTAssertEqual(newScore, "15")
   }
   
   func testScoreIsKept() {
     let app = XCUIApplication()
-    dump(app.staticTexts.element)
     let scoreLabel = app.staticTexts.element(matching: .any, identifier: "scoreLabel").label
     let startingScore = "0"
+    
     XCTAssertEqual(scoreLabel, startingScore)
   }
   
